@@ -14,8 +14,7 @@ int main()
 
         srand(time(0));
 
-        std::cout << "<<Suma de los elementos de las Columnas y Filas, independiente," 
-            << "de una matriz, con valores ingresados por el usuario >> " << std::endl;
+        std::cout << "<<Suma de los elementos de las Columnas y Filas, independiente, de una matriz, con valores ingresados por el usuario>>" << std::endl;
         std::cout << std::endl;
         std::cout << std::endl;
         std::cout << "Ingrese la cantidad de filas: " << std::endl;
@@ -27,16 +26,15 @@ int main()
 
 
         int a[x][y];
-        for (int i = 0; i < x; i++) { //i=0 & i<x & i++ ---> 1 + 1 + 1 
-            for (int j = 0; j < y; j++) //j=0 & j<y & j++ ---> 1 + 1 + 1
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++)
             {
-                std::cout << "Ingrese valor para la posicion" << 
-                    "[" << i + 1 << "]" << "[" << j + 1 << "]" << ":" << std::endl; //i+1 & j + 1 ---> 1 + 1
+                std::cout << "Ingrese valor para la posicion" << "[" << i + 1 << "]" << "[" << j + 1 << "]" << ":" << std::endl;
                 std::cin >> a[i][j];
-            }//Tf1(n) = (1 + n * ( 1 + 2 + 1) + 1) = 4n + 2
-        }//Tf2(n) = (1 + n * ( 1 + 4n + 2 + 1) + 1) = (4n^2)+4n+2
+            }
+        }
         std::cout << "Su Matriz: " << std::endl;
-        for (int i = 0; i < x; i++) { 
+        for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 std::cout << a[i][j] << '\t';
             }
