@@ -39,9 +39,9 @@ int main()
         for (int i = 0; i < x; i++) { 
             for (int j = 0; j < y; j++) {
                 std::cout << a[i][j] << '\t';
-            }
+            }//Tf3(n) = (1 + n * (1 + 0 + 1)+ 1) = 2n + 2
             std::cout << std::endl;
-        }
+        }//Tf4(n) = (1 + n * (1 + 2n + 2 + 1)+ 1) = (2n^2)+4n+2
 
         std::cout << std::endl;
         std::cout << std::endl;
@@ -55,10 +55,10 @@ int main()
             for (int j = 0; j < x; j++) {
                 sum = sum + a[i][j];
                 
-            }
+            }//Tf5(n) = (1 + 1 + n * (1 + 2 + 1)+ 1) = 4n+3
             sf[i] = sum;
             std::cout << "Suma de la fila: " << i + 1 << " es: " << sum << std::endl;
-        }
+        }//Tf6(n) =  (1 + n * (1 + (4n + 3 + 1 + 1 ) + 1) + 1) = (4n^2) + 7n + 2 
 
         int sc[y];
         std::cout << "\nSuma de cada columna: " << std::endl;
@@ -69,11 +69,10 @@ int main()
 
             for (int j = 0; j < x; j++) {
                 suma = suma + a[j][i];
-                
-            }
+            }//Tf7(n) = (1 + 1 + n * (1 + 2 + 1)+ 1) = 4n + 3
             sc[i] = suma;
             std::cout << "Suma de la columna: " << i + 1 << " es: " << suma << std::endl;
-        }
+        }//Tf8(n) =  (1 + n * (1 + (4n + 3 + 1 + 1 ) + 1) + 1) = (4n^2) + 7n + 2
                
        
         std::cout << std::endl;
@@ -81,12 +80,12 @@ int main()
         std::cout << "Vector de sumas de filas = { ";
         for (int i = 0; i < x; i++) {
              std::cout << sf[i] << ", ";
-        }
+        }//Tf9(n) =  (1 + n * (1 + 0 + 1) + 1) = 2n + 2
         std::cout << " } " << std::endl;
         std::cout << "Vector de sumas de columnas = { ";
         for (int i = 0; i < y; i++) {
             std::cout << sc[i] << ", ";
-        }
+        }//Tf10(n) =  (1 + n * (1 + 0 + 1) + 1) = 2n + 2
         std::cout << " } " << std::endl;
         std::cout << std::endl;
         std::cout << std::endl;
@@ -95,7 +94,7 @@ int main()
         std::cout << std::endl;
     }
 
-    return 0;
+    return 0; //---> 1
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
